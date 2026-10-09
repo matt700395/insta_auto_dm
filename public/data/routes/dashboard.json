@@ -1,0 +1,172 @@
+{
+  "__mock": {
+    "mode": "success"
+  },
+  "page": {
+    "title": "대시보드",
+    "subtitle": "오늘의 운영 현황을 확인하세요."
+  },
+  "view": {
+    "testModeBanner": {
+      "enabled": false,
+      "message": "테스트 모드가 켜져 있어 실제 DM 발송이 차단됩니다."
+    },
+    "kpis": [
+      {
+        "key": "totalRules",
+        "label": "총 규칙 수",
+        "value": 10,
+        "unit": "개",
+        "delta": "+1 이번 주",
+        "tone": "neutral"
+      },
+      {
+        "key": "activeRules",
+        "label": "활성 규칙",
+        "value": 8,
+        "unit": "개",
+        "delta": "전체의 80%",
+        "tone": "good"
+      },
+      {
+        "key": "todayIncoming",
+        "label": "오늘 수신",
+        "value": 14,
+        "unit": "건",
+        "delta": "어제 대비 +12%",
+        "tone": "good"
+      },
+      {
+        "key": "todaySuccess",
+        "label": "오늘 발송 성공",
+        "value": 8,
+        "unit": "건",
+        "delta": "실패 3건",
+        "tone": "warn"
+      }
+    ],
+    "recentIncoming": [
+      {
+        "id": "in_001",
+        "sender": "jiwoo_daily",
+        "message": "안녕하세요 가격이 어떻게 되나요?",
+        "receivedAt": "10:21",
+        "matched": true,
+        "ruleName": "가격 문의",
+        "ruleId": "r_001"
+      },
+      {
+        "id": "in_002",
+        "sender": "minsu.kim92",
+        "message": "배송은 얼마나 걸리나요?",
+        "receivedAt": "10:18",
+        "matched": true,
+        "ruleName": "가격 문의",
+        "ruleId": "r_001"
+      },
+      {
+        "id": "in_003",
+        "sender": "seoyeon_o",
+        "message": "매장 주소가 어디예요?",
+        "receivedAt": "10:12",
+        "matched": false,
+        "ruleName": null,
+        "ruleId": null
+      },
+      {
+        "id": "in_004",
+        "sender": "cafe_haru",
+        "message": "협업",
+        "receivedAt": "10:05",
+        "matched": true,
+        "ruleName": "협업 문의",
+        "ruleId": "r_004"
+      },
+      {
+        "id": "in_005",
+        "sender": "yuna.lee",
+        "message": "링크 보내주세요!",
+        "receivedAt": "09:58",
+        "matched": true,
+        "ruleName": "링크 요청",
+        "ruleId": "r_006"
+      },
+      {
+        "id": "in_006",
+        "sender": "dohyun_92",
+        "message": "환불 가능한가요? 사이즈가 안 맞아요",
+        "receivedAt": "09:47",
+        "matched": true,
+        "ruleName": "교환/환불 문의",
+        "ruleId": "r_007"
+      }
+    ],
+    "recentOutgoingFailures": [
+      {
+        "id": "out_003",
+        "recipient": "cafe_haru",
+        "ruleName": "협업 문의",
+        "ruleId": "r_004",
+        "failureReason": "Access Token이 만료되었습니다. (OAuth code 190)",
+        "sentAt": "10-09 10:05"
+      },
+      {
+        "id": "out_007",
+        "recipient": "traveler_jun",
+        "ruleName": "배송 문의",
+        "ruleId": "r_002",
+        "failureReason": "24시간 메시징 윈도우를 초과했습니다. (code 10)",
+        "sentAt": "10-09 09:33"
+      },
+      {
+        "id": "out_011",
+        "recipient": "jaemin_lee",
+        "ruleName": "교환/환불 문의",
+        "ruleId": "r_007",
+        "failureReason": "일시적인 Meta API 오류 (HTTP 503)",
+        "sentAt": "10-09 08:12"
+      },
+      {
+        "id": "out_018",
+        "recipient": "hyunwoo_m",
+        "ruleName": "교환/환불 문의",
+        "ruleId": "r_007",
+        "failureReason": "수신자가 메시지 수신을 차단했습니다. (code 551)",
+        "sentAt": "10-08 15:22"
+      }
+    ]
+  },
+  "actions": {
+    "quickLinks": [
+      {
+        "key": "DASHBOARD_GO_RULE_NEW",
+        "label": "새 규칙 만들기",
+        "description": "새 문의 유형에 대한 자동응답 추가",
+        "to": "/rules/new",
+        "icon": "plus",
+        "primary": true
+      },
+      {
+        "key": "DASHBOARD_GO_RULES",
+        "label": "규칙 목록 보기",
+        "description": "규칙 검색·수정·활성 전환",
+        "to": "/rules",
+        "icon": "list"
+      },
+      {
+        "key": "DASHBOARD_GO_INCOMING_LOGS",
+        "label": "수신 로그 보기",
+        "description": "들어온 DM과 매칭 결과 확인",
+        "to": "/logs/incoming",
+        "icon": "inbox"
+      },
+      {
+        "key": "DASHBOARD_GO_TEST",
+        "label": "테스트 실행",
+        "description": "문장으로 규칙 매칭 검증",
+        "to": "/test",
+        "icon": "flask"
+      }
+    ]
+  }
+}

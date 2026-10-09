@@ -1,0 +1,333 @@
+{
+  "__mock": {
+    "mode": "success"
+  },
+  "page": {
+    "title": "발송 로그",
+    "subtitle": "자동응답 발송 결과(성공/실패)를 확인합니다."
+  },
+  "view": {
+    "pageSize": 8,
+    "filters": {
+      "searchPlaceholder": "규칙명 또는 수신자 ID 검색",
+      "statusOptions": [
+        {
+          "value": "all",
+          "label": "전체"
+        },
+        {
+          "value": "success",
+          "label": "성공"
+        },
+        {
+          "value": "failed",
+          "label": "실패"
+        }
+      ]
+    },
+    "logs": [
+      {
+        "id": "out_001",
+        "recipient": "jiwoo_daily",
+        "ruleId": "r_001",
+        "ruleName": "가격 문의",
+        "status": "success",
+        "sentAt": "2026-10-09 10:21",
+        "text": "문의 주셔서 감사합니다! 😊 상품별 가격은 아래 링크에서 확인하실 수 있어요. 추가로 궁금한 점이 있으면 편하게 말씀해주세요.",
+        "link": "https://example.com/price",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"jiwoo_daily\", \"message_id\": \"m_255j\" }",
+        "incomingId": "in_001"
+      },
+      {
+        "id": "out_002",
+        "recipient": "minsu.kim92",
+        "ruleId": "r_001",
+        "ruleName": "가격 문의",
+        "status": "success",
+        "sentAt": "2026-10-09 10:18",
+        "text": "문의 주셔서 감사합니다! 😊 상품별 가격은 아래 링크에서 확인하실 수 있어요. 추가로 궁금한 점이 있으면 편하게 말씀해주세요.",
+        "link": "https://example.com/price",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"minsu.kim92\", \"message_id\": \"m_2b9i\" }",
+        "incomingId": "in_002"
+      },
+      {
+        "id": "out_003",
+        "recipient": "cafe_haru",
+        "ruleId": "r_004",
+        "ruleName": "협업 문의",
+        "status": "failed",
+        "sentAt": "2026-10-09 10:05",
+        "text": "협업 제안 감사합니다. 담당자 메일(partner@example.com)로 소개 자료를 보내주시면 검토 후 회신드리겠습니다.",
+        "link": "",
+        "failureReason": "Access Token이 만료되었습니다. (OAuth code 190)",
+        "apiResponse": "{ \"error\": { \"message\": \"Error validating access token: Session has expired\", \"type\": \"OAuthException\", \"code\": 190 } }",
+        "incomingId": "in_004"
+      },
+      {
+        "id": "out_004",
+        "recipient": "yuna.lee",
+        "ruleId": "r_006",
+        "ruleName": "링크 요청",
+        "status": "success",
+        "sentAt": "2026-10-09 09:58",
+        "text": "공식 스토어 링크를 보내드립니다. 🛍️ 이곳에서 전체 상품을 확인하실 수 있어요.",
+        "link": "https://example.com/store",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"yuna.lee\", \"message_id\": \"m_2nhg\" }",
+        "incomingId": "in_005"
+      },
+      {
+        "id": "out_005",
+        "recipient": "dohyun_92",
+        "ruleId": "r_007",
+        "ruleName": "교환/환불 문의",
+        "status": "success",
+        "sentAt": "2026-10-09 09:47",
+        "text": "수령 후 7일 이내 미사용 상품에 한해 교환/환불이 가능합니다. 자세한 절차는 아래 안내를 참고해주세요.",
+        "link": "https://example.com/refund",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"dohyun_92\", \"message_id\": \"m_2tlf\" }",
+        "incomingId": "in_006"
+      },
+      {
+        "id": "out_006",
+        "recipient": "hello_mina",
+        "ruleId": "r_010",
+        "ruleName": "인사 응답",
+        "status": "success",
+        "sentAt": "2026-10-09 09:40",
+        "text": "안녕하세요! 무엇을 도와드릴까요? 가격·배송·교환 등 궁금한 점을 편하게 남겨주세요 🙌",
+        "link": "",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"hello_mina\", \"message_id\": \"m_2zpe\" }",
+        "incomingId": "in_007"
+      },
+      {
+        "id": "out_007",
+        "recipient": "traveler_jun",
+        "ruleId": "r_002",
+        "ruleName": "배송 문의",
+        "status": "failed",
+        "sentAt": "2026-10-09 09:33",
+        "text": "평일 오후 2시 이전 결제 건은 당일 출고되며, 출고 후 1~2일 내 도착합니다. (도서산간 지역은 +1~2일)",
+        "link": "https://example.com/shipping",
+        "failureReason": "24시간 메시징 윈도우를 초과했습니다. (code 10)",
+        "apiResponse": "{ \"error\": { \"message\": \"This message is sent outside of allowed window.\", \"type\": \"OAuthException\", \"code\": 10, \"error_subcode\": 2534022 } }",
+        "incomingId": "in_008"
+      },
+      {
+        "id": "out_008",
+        "recipient": "bora.park",
+        "ruleId": "r_005",
+        "ruleName": "영업시간 안내",
+        "status": "success",
+        "sentAt": "2026-10-09 09:21",
+        "text": "영업시간은 평일 10:00~19:00, 토요일 11:00~17:00입니다. 일요일/공휴일은 휴무입니다.",
+        "link": "",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"bora.park\", \"message_id\": \"m_3bxc\" }",
+        "incomingId": "in_009"
+      },
+      {
+        "id": "out_009",
+        "recipient": "sua_choi",
+        "ruleId": "r_009",
+        "ruleName": "재입고 문의",
+        "status": "success",
+        "sentAt": "2026-10-09 08:55",
+        "text": "재입고 일정은 상품별로 상이하며, 공지사항과 스토리를 통해 안내드리고 있어요. 알림 신청을 해두시면 가장 빠르게 받아보실 수 있습니다!",
+        "link": "https://example.com/restock",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"sua_choi\", \"message_id\": \"m_3i1b\" }",
+        "incomingId": "in_011"
+      },
+      {
+        "id": "out_010",
+        "recipient": "hana.daily",
+        "ruleId": "r_001",
+        "ruleName": "가격 문의",
+        "status": "success",
+        "sentAt": "2026-10-09 08:30",
+        "text": "문의 주셔서 감사합니다! 😊 상품별 가격은 아래 링크에서 확인하실 수 있어요. 추가로 궁금한 점이 있으면 편하게 말씀해주세요.",
+        "link": "https://example.com/price",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"hana.daily\", \"message_id\": \"m_3o5a\" }",
+        "incomingId": "in_013"
+      },
+      {
+        "id": "out_011",
+        "recipient": "jaemin_lee",
+        "ruleId": "r_007",
+        "ruleName": "교환/환불 문의",
+        "status": "failed",
+        "sentAt": "2026-10-09 08:12",
+        "text": "수령 후 7일 이내 미사용 상품에 한해 교환/환불이 가능합니다. 자세한 절차는 아래 안내를 참고해주세요.",
+        "link": "https://example.com/refund",
+        "failureReason": "일시적인 Meta API 오류 (HTTP 503)",
+        "apiResponse": "{ \"error\": { \"message\": \"Service temporarily unavailable\", \"type\": \"GraphMethodException\", \"code\": 2 } }",
+        "incomingId": "in_014"
+      },
+      {
+        "id": "out_012",
+        "recipient": "somin_s",
+        "ruleId": "r_006",
+        "ruleName": "링크 요청",
+        "status": "success",
+        "sentAt": "2026-10-08 22:40",
+        "text": "공식 스토어 링크를 보내드립니다. 🛍️ 이곳에서 전체 상품을 확인하실 수 있어요.",
+        "link": "https://example.com/store",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"somin_s\", \"message_id\": \"m_40d8\" }",
+        "incomingId": "in_015"
+      },
+      {
+        "id": "out_013",
+        "recipient": "eunji_w",
+        "ruleId": "r_002",
+        "ruleName": "배송 문의",
+        "status": "success",
+        "sentAt": "2026-10-08 21:50",
+        "text": "평일 오후 2시 이전 결제 건은 당일 출고되며, 출고 후 1~2일 내 도착합니다. (도서산간 지역은 +1~2일)",
+        "link": "https://example.com/shipping",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"eunji_w\", \"message_id\": \"m_46h7\" }",
+        "incomingId": "in_017"
+      },
+      {
+        "id": "out_014",
+        "recipient": "minjae.b",
+        "ruleId": "r_001",
+        "ruleName": "가격 문의",
+        "status": "success",
+        "sentAt": "2026-10-08 20:31",
+        "text": "문의 주셔서 감사합니다! 😊 상품별 가격은 아래 링크에서 확인하실 수 있어요. 추가로 궁금한 점이 있으면 편하게 말씀해주세요.",
+        "link": "https://example.com/price",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"minjae.b\", \"message_id\": \"m_4cl6\" }",
+        "incomingId": "in_018"
+      },
+      {
+        "id": "out_015",
+        "recipient": "lena_kr",
+        "ruleId": "r_005",
+        "ruleName": "영업시간 안내",
+        "status": "success",
+        "sentAt": "2026-10-08 19:05",
+        "text": "영업시간은 평일 10:00~19:00, 토요일 11:00~17:00입니다. 일요일/공휴일은 휴무입니다.",
+        "link": "",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"lena_kr\", \"message_id\": \"m_4ip5\" }",
+        "incomingId": "in_019"
+      },
+      {
+        "id": "out_016",
+        "recipient": "chanho_o",
+        "ruleId": "r_009",
+        "ruleName": "재입고 문의",
+        "status": "success",
+        "sentAt": "2026-10-08 18:20",
+        "text": "재입고 일정은 상품별로 상이하며, 공지사항과 스토리를 통해 안내드리고 있어요. 알림 신청을 해두시면 가장 빠르게 받아보실 수 있습니다!",
+        "link": "https://example.com/restock",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"chanho_o\", \"message_id\": \"m_4ot4\" }",
+        "incomingId": "in_020"
+      },
+      {
+        "id": "out_017",
+        "recipient": "daeun_p",
+        "ruleId": "r_004",
+        "ruleName": "협업 문의",
+        "status": "success",
+        "sentAt": "2026-10-08 16:10",
+        "text": "협업 제안 감사합니다. 담당자 메일(partner@example.com)로 소개 자료를 보내주시면 검토 후 회신드리겠습니다.",
+        "link": "",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"daeun_p\", \"message_id\": \"m_4ux3\" }",
+        "incomingId": "in_022"
+      },
+      {
+        "id": "out_018",
+        "recipient": "hyunwoo_m",
+        "ruleId": "r_007",
+        "ruleName": "교환/환불 문의",
+        "status": "failed",
+        "sentAt": "2026-10-08 15:22",
+        "text": "수령 후 7일 이내 미사용 상품에 한해 교환/환불이 가능합니다. 자세한 절차는 아래 안내를 참고해주세요.",
+        "link": "https://example.com/refund",
+        "failureReason": "수신자가 메시지 수신을 차단했습니다. (code 551)",
+        "apiResponse": "{ \"error\": { \"message\": \"This person isn't available right now.\", \"type\": \"OAuthException\", \"code\": 551 } }",
+        "incomingId": "in_023"
+      },
+      {
+        "id": "out_019",
+        "recipient": "nari_home",
+        "ruleId": "r_010",
+        "ruleName": "인사 응답",
+        "status": "success",
+        "sentAt": "2026-10-08 14:03",
+        "text": "안녕하세요! 무엇을 도와드릴까요? 가격·배송·교환 등 궁금한 점을 편하게 남겨주세요 🙌",
+        "link": "",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"nari_home\", \"message_id\": \"m_5751\" }",
+        "incomingId": "in_024"
+      },
+      {
+        "id": "out_020",
+        "recipient": "seojun.k",
+        "ruleId": "r_006",
+        "ruleName": "링크 요청",
+        "status": "success",
+        "sentAt": "2026-10-08 13:51",
+        "text": "공식 스토어 링크를 보내드립니다. 🛍️ 이곳에서 전체 상품을 확인하실 수 있어요.",
+        "link": "https://example.com/store",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"seojun.k\", \"message_id\": \"m_5d90\" }",
+        "incomingId": "in_025"
+      },
+      {
+        "id": "out_021",
+        "recipient": "kyungmin_",
+        "ruleId": "r_001",
+        "ruleName": "가격 문의",
+        "status": "success",
+        "sentAt": "2026-10-08 11:18",
+        "text": "문의 주셔서 감사합니다! 😊 상품별 가격은 아래 링크에서 확인하실 수 있어요. 추가로 궁금한 점이 있으면 편하게 말씀해주세요.",
+        "link": "https://example.com/price",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"kyungmin_\", \"message_id\": \"m_5jcz\" }",
+        "incomingId": "in_027"
+      },
+      {
+        "id": "out_022",
+        "recipient": "sihoo_1",
+        "ruleId": "r_002",
+        "ruleName": "배송 문의",
+        "status": "success",
+        "sentAt": "2026-10-08 10:42",
+        "text": "평일 오후 2시 이전 결제 건은 당일 출고되며, 출고 후 1~2일 내 도착합니다. (도서산간 지역은 +1~2일)",
+        "link": "https://example.com/shipping",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"sihoo_1\", \"message_id\": \"m_5pgy\" }",
+        "incomingId": "in_028"
+      },
+      {
+        "id": "out_023",
+        "recipient": "junho_c",
+        "ruleId": "r_001",
+        "ruleName": "가격 문의",
+        "status": "success",
+        "sentAt": "2026-10-08 09:12",
+        "text": "문의 주셔서 감사합니다! 😊 상품별 가격은 아래 링크에서 확인하실 수 있어요. 추가로 궁금한 점이 있으면 편하게 말씀해주세요.",
+        "link": "https://example.com/price",
+        "failureReason": null,
+        "apiResponse": "{ \"recipient_id\": \"junho_c\", \"message_id\": \"m_5vkx\" }",
+        "incomingId": "in_030"
+      }
+    ]
+  },
+  "actions": {
+    "exportLabel": "CSV 내보내기"
+  }
+}

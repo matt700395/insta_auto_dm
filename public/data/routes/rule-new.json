@@ -1,0 +1,42 @@
+{
+  "__mock": {
+    "mode": "success"
+  },
+  "page": {
+    "title": "새 규칙 만들기",
+    "subtitle": "DM에서 감지할 키워드와 자동으로 보낼 답변을 설정합니다."
+  },
+  "view": {
+    "matchTypeOptions": [
+      {
+        "value": "contains",
+        "label": "포함 (contains)",
+        "description": "메시지 어딘가에 키워드가 있으면 반응"
+      },
+      {
+        "value": "exact",
+        "label": "완전 일치 (exact)",
+        "description": "메시지 전체가 키워드와 같을 때만 반응"
+      }
+    ],
+    "form": {
+      "defaultName": "배송 지연 문의",
+      "defaultDescription": "배송이 늦어질 때 보내는 안내 응답",
+      "defaultMatchType": "contains",
+      "defaultKeywords": [
+        "지연",
+        "아직 안 왔",
+        "언제 와요"
+      ],
+      "defaultReplyText": "배송 지연으로 불편을 드려 죄송합니다. 현재 물량이 몰려 1~2일 추가 소요되고 있으며, 빠르게 발송해드리겠습니다.",
+      "defaultReplyLink": "https://example.com/shipping",
+      "defaultIsActive": true,
+      "defaultPriority": 100
+    }
+  },
+  "actions": {
+    "submitLabel": "저장",
+    "submitAndListLabel": "저장 후 목록으로",
+    "cancelLabel": "취소"
+  }
+}

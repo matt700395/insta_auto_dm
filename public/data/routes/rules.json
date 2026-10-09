@@ -1,0 +1,195 @@
+{
+  "__mock": {
+    "mode": "success"
+  },
+  "page": {
+    "title": "규칙 관리",
+    "subtitle": "자동응답 규칙을 조회하고 수정합니다."
+  },
+  "view": {
+    "pageSize": 6,
+    "filters": {
+      "searchPlaceholder": "규칙명 또는 키워드로 검색",
+      "statusOptions": [
+        {
+          "value": "all",
+          "label": "전체"
+        },
+        {
+          "value": "active",
+          "label": "활성"
+        },
+        {
+          "value": "inactive",
+          "label": "비활성"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "r_001",
+        "name": "가격 문의",
+        "description": "가격·비용 관련 질문에 가격표 링크를 안내합니다.",
+        "matchType": "contains",
+        "triggerKeywords": [
+          "가격",
+          "비용",
+          "얼마",
+          "price"
+        ],
+        "replyText": "문의 주셔서 감사합니다! 😊 상품별 가격은 아래 링크에서 확인하실 수 있어요. 추가로 궁금한 점이 있으면 편하게 말씀해주세요.",
+        "replyLink": "https://example.com/price",
+        "isActive": true,
+        "priority": 100,
+        "updatedAt": "2026-10-08 14:32"
+      },
+      {
+        "id": "r_002",
+        "name": "배송 문의",
+        "description": "배송 기간 및 택배사 안내.",
+        "matchType": "contains",
+        "triggerKeywords": [
+          "배송",
+          "택배",
+          "도착"
+        ],
+        "replyText": "평일 오후 2시 이전 결제 건은 당일 출고되며, 출고 후 1~2일 내 도착합니다. (도서산간 지역은 +1~2일)",
+        "replyLink": "https://example.com/shipping",
+        "isActive": true,
+        "priority": 95,
+        "updatedAt": "2026-10-07 09:10"
+      },
+      {
+        "id": "r_003",
+        "name": "위치 문의",
+        "description": "오프라인 매장 위치 안내.",
+        "matchType": "contains",
+        "triggerKeywords": [
+          "위치",
+          "주소",
+          "어디"
+        ],
+        "replyText": "저희 매장은 서울시 마포구 월드컵북로 21 2층에 있습니다. 주차는 건물 지하 1층을 이용해주세요.",
+        "replyLink": "https://example.com/location",
+        "isActive": false,
+        "priority": 80,
+        "updatedAt": "2026-10-02 18:45"
+      },
+      {
+        "id": "r_004",
+        "name": "협업 문의",
+        "description": "제휴·협업 제안은 담당자 메일로 안내.",
+        "matchType": "exact",
+        "triggerKeywords": [
+          "협업",
+          "제휴",
+          "협업 문의"
+        ],
+        "replyText": "협업 제안 감사합니다. 담당자 메일(partner@example.com)로 소개 자료를 보내주시면 검토 후 회신드리겠습니다.",
+        "replyLink": "",
+        "isActive": true,
+        "priority": 90,
+        "updatedAt": "2026-10-05 11:20"
+      },
+      {
+        "id": "r_005",
+        "name": "영업시간 안내",
+        "description": "영업/운영 시간 질문 대응.",
+        "matchType": "contains",
+        "triggerKeywords": [
+          "영업시간",
+          "운영시간",
+          "몇 시"
+        ],
+        "replyText": "영업시간은 평일 10:00~19:00, 토요일 11:00~17:00입니다. 일요일/공휴일은 휴무입니다.",
+        "replyLink": "",
+        "isActive": true,
+        "priority": 85,
+        "updatedAt": "2026-10-06 16:02"
+      },
+      {
+        "id": "r_006",
+        "name": "링크 요청",
+        "description": "공식 사이트·스토어 링크를 요청할 때.",
+        "matchType": "contains",
+        "triggerKeywords": [
+          "링크",
+          "사이트",
+          "홈페이지"
+        ],
+        "replyText": "공식 스토어 링크를 보내드립니다. 🛍️ 이곳에서 전체 상품을 확인하실 수 있어요.",
+        "replyLink": "https://example.com/store",
+        "isActive": true,
+        "priority": 70,
+        "updatedAt": "2026-10-04 20:15"
+      },
+      {
+        "id": "r_007",
+        "name": "교환/환불 문의",
+        "description": "교환·환불·반품 절차 안내.",
+        "matchType": "contains",
+        "triggerKeywords": [
+          "환불",
+          "교환",
+          "반품"
+        ],
+        "replyText": "수령 후 7일 이내 미사용 상품에 한해 교환/환불이 가능합니다. 자세한 절차는 아래 안내를 참고해주세요.",
+        "replyLink": "https://example.com/refund",
+        "isActive": true,
+        "priority": 92,
+        "updatedAt": "2026-10-08 10:05"
+      },
+      {
+        "id": "r_008",
+        "name": "할인/쿠폰 문의",
+        "description": "이벤트·쿠폰 문의 (시즌 종료로 비활성).",
+        "matchType": "contains",
+        "triggerKeywords": [
+          "할인",
+          "쿠폰",
+          "이벤트"
+        ],
+        "replyText": "현재 진행 중인 이벤트와 쿠폰은 아래 페이지에서 확인하실 수 있습니다.",
+        "replyLink": "https://example.com/event",
+        "isActive": false,
+        "priority": 60,
+        "updatedAt": "2026-09-28 13:40"
+      },
+      {
+        "id": "r_009",
+        "name": "재입고 문의",
+        "description": "품절 상품 재입고 일정 안내.",
+        "matchType": "contains",
+        "triggerKeywords": [
+          "재입고",
+          "품절",
+          "입고"
+        ],
+        "replyText": "재입고 일정은 상품별로 상이하며, 공지사항과 스토리를 통해 안내드리고 있어요. 알림 신청을 해두시면 가장 빠르게 받아보실 수 있습니다!",
+        "replyLink": "https://example.com/restock",
+        "isActive": true,
+        "priority": 75,
+        "updatedAt": "2026-10-03 15:50"
+      },
+      {
+        "id": "r_010",
+        "name": "인사 응답",
+        "description": "단순 인사 메시지에 대한 첫 응답.",
+        "matchType": "exact",
+        "triggerKeywords": [
+          "안녕하세요",
+          "안녕",
+          "hello"
+        ],
+        "replyText": "안녕하세요! 무엇을 도와드릴까요? 가격·배송·교환 등 궁금한 점을 편하게 남겨주세요 🙌",
+        "replyLink": "",
+        "isActive": true,
+        "priority": 50,
+        "updatedAt": "2026-10-01 09:00"
+      }
+    ]
+  },
+  "actions": {
+    "primaryButtonLabel": "새 규칙 만들기"
+  }
+}
